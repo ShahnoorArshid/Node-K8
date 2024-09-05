@@ -37,7 +37,7 @@ services:
     volumes:
       - ./backend:/var/www/html
     labels:
-      - "traefik.http.routers.api.rule=(Host(`app.localhost`) && PathPrefix(`/api`))"
+      - "traefik.http.routers.api.rule=Host(`api.app.localhost`)"   ## && PathPrefix(`/api`))"
     depends_on:
       - traefik
       - mysql
